@@ -1,0 +1,122 @@
+@font-face {
+    font-family: neueBold;
+    src: url(../fonts/HelveticaNeue\ Bold.ttf);
+  }
+
+  @font-face {
+    font-family: neueMedium;
+    src: url(../fonts/HelveticaNeue\ Medium.ttf);
+  }
+
+  
+  @font-face {
+    font-family: neueNormal;
+    src: url(../fonts/HelveticaNeue\ Normal.ttf);
+  }
+
+  $blue:#341EFF;
+  $dark-p:#1D1D1D;
+  $footer-p:#7A7A7E;
+  $footer-h:#1C1C1D;
+  $img-backround:#F6F5FF;
+  
+
+  %btn {
+    cursor: pointer;
+    padding: 16.11px 26.17px;
+    font-size: 16.11px;
+    font-family: neueMedium;
+    background-color: $blue;
+    border-radius: 8.05px;
+    border: none;
+    color: #fff;
+}
+
+%custom-header {
+  @media screen and (max-width: 767px){
+    font-size: 24px;
+    line-height: 34px;
+    margin-bottom: 40px;
+
+
+}
+  font-family: neueBold;
+  font-size: 44px;
+  line-height: 56px;
+  margin-bottom: 60px;
+
+}
+
+%golden-img {
+  padding:18px;  
+  background-color: $blue;
+  border-radius: 5px;
+  border: none;
+}
+
+%icon-p {
+  @media screen and (max-width: 767px){
+    font-weight: 400;
+    margin-bottom: 40px;
+
+
+
+  }
+  font-size: 14px;
+  line-height: 24px;
+  color: $dark-p;
+  margin-bottom: 30px;
+  font-weight: 500;
+  
+
+}
+
+@mixin toCenter{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin sameBefore {
+  @media screen and (max-width: 767px){
+    width: 110%;
+
+  }
+  position: absolute;
+  content: "";
+  width: 168%;
+  z-index: -1;
+  height: 60%;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: $img-backround;
+}
+
+%dolar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 40px 0px;
+
+}
+
+@mixin pCard($renk)
+{
+  @media screen and (max-width: 767px){
+    word-spacing: 0px;
+
+}
+  color: $renk;
+  font-family: neueNormal;
+  font-size: 14px;
+  line-height: 26px;
+  margin-bottom: 20px;
+  display: flex;
+  gap: 11.33px;
+  align-items: flex-start;
+
+}
+
+
+

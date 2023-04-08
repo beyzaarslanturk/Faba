@@ -1,0 +1,695 @@
+main {
+    h2 {
+        @extend %custom-header;
+    }
+
+    ul {
+        li {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+
+            p {
+                @media screen and (max-width: 767px) {
+                    width: 100%;
+
+                }
+                @extend %icon-p;
+                max-width: 390px;
+                word-spacing: 3px;
+
+            }
+        }
+    }
+}
+
+section.golden {
+    @media screen and (max-width: 767px) {
+    }
+
+    padding-top: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .golden-head {
+        h2 {
+            @media screen and (max-width: 767px) {
+                margin-bottom: 20px;
+                margin-top: 80px;
+                text-align: left;
+
+            }
+            @extend %custom-header;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        p {
+            @media screen and (max-width: 767px) {
+                margin-bottom: 40px;
+
+            }
+            margin-bottom: 60px;
+            text-align: center;
+
+        }
+
+
+    }
+
+    .golden-content {
+       
+
+        display: flex;
+        gap: 30px;
+
+        @media screen and (max-width: 767px) {
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .same-cards {
+            @media screen and (max-width: 767px) {
+                
+                width: 90%;
+                text-align: center;
+                padding: 40px 45px;
+
+            }
+
+            background-color: #F6F5FF;
+            padding: 40px 65px;
+            text-align: center;
+
+            .card-image {
+                text-align: center;
+                @extend %golden-img;
+                display: inline-block;
+                margin-bottom: 40px;
+
+            }
+
+            p {
+                @media screen and (max-width: 767px){
+                    line-height: 28px;
+                    font-size: 16px;
+                }
+                white-space: nowrap;
+                font-family: neueBold;
+                line-height: 34px;
+                font-size: 20px;
+            }
+
+
+        }
+
+        .second-card {
+            background-color: #EDFCF4;
+            ;
+
+            .second-img {
+                background-color: #32EB88;
+
+            }
+        }
+
+        .third-card {
+
+            .third-img {
+                background-color: #FF541E;
+
+            }
+        }
+    }
+
+    .golden-button {
+        @extend %btn;
+        margin-top: 60px;
+        @media screen and (max-width: 767px) {
+            display: none;
+        }
+    }
+}
+
+section.weekly {
+    @media screen and (max-width: 767px) {
+        
+        flex-direction: column-reverse;
+        gap: 24px;
+        padding-left: 20px;
+        padding-bottom: 0px;
+    }
+
+    @include toCenter;
+    justify-content: flex-start;
+    padding-left: 151px;
+    gap: 204px;
+    padding-bottom: 150px;
+
+    .weekly-left {
+        @media screen and (max-width: 767px){
+            width: 100%;
+            padding-top: 0px;
+
+        }
+        padding-top: 158px;
+        width: 40%;
+
+        h2 {
+            @extend %custom-header;
+        }
+    }
+
+    .weekly-right {
+        padding-top: 66px;
+
+        .img-container {
+            position: relative;
+
+            span {
+                @media screen and (max-width: 767px) {
+                    left: -91px;
+                    top: 0px;
+
+                    img {
+                        width: 300px;
+                    }
+
+                }
+                position: absolute;
+                top: -10px;
+                left: -171px;
+            }
+
+            &::before {
+                @include sameBefore;
+            }
+        }
+    }
+}
+
+section.win5 {
+    @media screen and (max-width: 767px) {
+        flex-direction: column;
+        gap: 24px;
+        padding-left: 20px;
+        padding-bottom: 0px;
+        padding-right: 0px;
+
+    }
+    @include toCenter;
+    gap: 200px;
+    padding-left: 260px;
+    padding-right: 149px;
+    padding-bottom: 157px;
+
+    .win5-left {
+
+        .img-container {
+            position: relative;
+
+
+            &::before {
+                @include sameBefore;
+
+            }
+
+
+
+            span {
+                @media screen and (max-width: 767px){
+                    display: none;
+                }
+                position: absolute;
+            }
+
+            span.star {
+                position: absolute;
+                right: -30px;
+                top: 50px;
+            }
+
+            span.rectangle {
+                position: absolute;
+                left: -110px;
+            }
+
+            span.koni {
+                position: absolute;
+                right: -110px;
+                top: 120px;
+            }
+
+            span.gift {
+                position: absolute;
+                top: 6px;
+                right: -110px;
+            }
+        }
+    }
+
+
+}
+
+section.win20 {
+
+    @media screen and (max-width: 767px){
+        flex-direction: column-reverse;
+        padding-left: 20px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    gap: 20px;
+    }
+    @include toCenter;
+    padding-left: 151px;
+    padding-right: 255px;
+    padding-bottom: 150px;
+    gap: 204px;
+
+
+
+
+    .win20-right {
+
+        .img-container {
+            position: relative;
+
+            &::before {
+                @include sameBefore;
+            }
+
+            span {
+                @media screen and (max-width: 767px) {
+                    display: none;
+            
+                }
+                position: absolute;
+                top: 20px;
+                left: -210px;
+            }
+        }
+
+    }
+}
+
+
+section.share {
+    @media screen and (max-width: 767px) {
+        flex-direction: column;
+        gap: 24px;
+        padding-left: 20px;
+        padding-bottom: 0px;
+        padding-right: 0px;
+
+    }
+    @include toCenter;
+    gap: 200px;
+    padding-left: 260px;
+    padding-right: 149px;
+    padding-bottom: 157px;
+
+    .share-left {
+
+        .img-container {
+            position: relative;
+
+
+            &::before {
+                @include sameBefore;
+
+            }
+
+            span {
+                @media screen and (max-width: 767px) {
+                    display: none;
+            
+                }
+            }
+
+
+            span.star {
+                position: absolute;
+                right: -30px;
+                top: 50px;
+            }
+
+            span.rectangle {
+                position: absolute;
+                left: -110px;
+            }
+
+            span.koni {
+                position: absolute;
+                right: -110px;
+                top: 120px;
+            }
+
+            span.smoothie {
+                position: absolute;
+                top: 250px;
+                right: -200px;
+            }
+        }
+    }
+
+    .share-right {
+        padding-top: 40px;
+    }
+
+}
+
+section.want {
+    @media screen and (max-width: 767px) {
+        flex-direction: column-reverse;
+        gap: 24px;
+        padding-left: 20px;
+        padding-bottom: 0px;
+        padding-right: 0px;
+
+    }
+    @include toCenter;
+    padding-left: 151px;
+    padding-right: 255px;
+    padding-bottom: 150px;
+    gap: 204px;
+
+    .want-right {
+
+        .img-container {
+            position: relative;
+
+            &::before {
+                @include sameBefore;
+            }
+
+            span {
+                position: absolute;
+                top: 20px;
+                left: -210px;
+            }
+        }
+
+    }
+}
+
+
+section.get {
+    @media screen and (max-width: 767px) {
+        flex-direction: column-reverse;
+        gap: 24px;
+        padding-left: 20px;
+        padding-bottom: 0px;
+        padding-right: 0px;
+
+    }
+    @include toCenter;
+    gap: 124px;
+    padding-left: 0px;
+    padding-right: 149px;
+    padding-bottom: 157px;
+
+    .get-left {
+
+        .img-container {
+            position: relative;
+
+            .normal-img {
+                display: block;
+                @media screen and (max-width: 767px) {
+                    max-width: 375px;
+                    display: none;
+                }
+
+            }
+            .responsive-img {
+                display: none;
+                @media screen and (max-width: 767px){
+                    display: block;
+                }
+                
+            }
+        }
+    }
+
+    .get-right {
+        h2 {
+            @media screen and (max-width: 767px) {
+                text-align: center;
+                padding: 0px 20px;
+            }
+
+        }
+        ul {
+        @media screen and (max-width: 767px) {
+            display: none;
+        }
+        padding-top: 35px;
+    }
+    }
+
+}
+
+section.newsletter {
+    @media screen and (max-width: 767px) {
+        flex-direction: column;
+        gap: 20px;
+        padding-left: 0px;
+        padding-bottom: 0px;
+        padding-right: 0px;
+
+    }
+    @include toCenter;
+    flex-direction: column;
+
+    h2 {
+        @media screen and (max-width: 767px){
+            width: 100%;
+            margin-top: 100px;
+            text-align: left;
+            padding-left: 20px;
+            margin-bottom: 20px;        
+        }
+        text-align: center;
+        width: 40%
+    }
+
+    .news-container {
+        @media screen and (max-width: 767px) {
+            flex-direction: column;
+            padding: 0px 20px;
+
+            
+        }
+        @include toCenter;
+        align-items: flex-start;
+        gap: 30px;
+        padding: 0px 150px;
+        padding-bottom: 100px;
+
+        p.title {
+            font-size: 14px;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: $dark-p;
+            font-family: neueMedium;
+
+
+        }
+
+        .samecard-left {
+            @media screen and (max-width: 767px) {
+                border: 1px solid rgba(199, 199, 199, 0.7);
+
+            }
+
+            padding: 40px;
+
+            p {
+                &:not(.title) {
+                    @include pCard(black);
+
+                    span {
+                        padding-top: 3px;
+                    }
+                }
+            }
+
+            .dolar {
+                @extend %dolar;
+
+                h4 {
+                    font-size: 50px;
+                }
+            }
+
+            button {
+                @extend %btn;
+                margin-top: 21px;
+            }
+        }
+
+        .samecard-center {
+            padding: 40px;
+            background-color: $blue;
+
+            .title {
+                color: #fff;
+            }
+
+            p {
+                &:not(.title) {
+                    @include pCard(#F2F2F2);
+
+                    span {
+                        padding-top: 3px;
+
+                    }
+                }
+            }
+
+            .dolar {
+                @extend %dolar;
+
+                span {
+                    color: #fff;
+                }
+
+                h4 {
+                    font-size: 50px;
+                    color: #fff;
+
+                }
+            }
+
+            button {
+                @extend %btn;
+                margin-top: 21px;
+                background-color: #edebff;
+                color: $blue;
+            }
+        }
+
+
+
+        .samecard-right {
+            padding: 40px;
+            @media screen and (max-width: 767px){
+                padding: 27px;
+
+                border: 1px solid rgba(199, 199, 199, 0.7);
+            }
+
+            p {
+               
+                &:not(.title) {
+                   
+                    @include pCard(black);
+
+                    span {
+                        padding-top: 3px
+                    }
+                }
+            }
+
+            .dolar {
+                @extend %dolar;
+
+                h4 {
+                    font-size: 50px;
+                }
+            }
+
+            button {
+                @extend %btn;
+                margin-top: 21px;
+            }
+        }
+    }
+}
+
+section.newsletter2 {
+    @media screen and (max-width: 767px) {
+        padding: 0px;
+        padding-bottom: 100px;
+        padding-top: 100px;
+
+
+    }
+    padding: 0px 150px;
+    padding-bottom: 150px;
+
+    .newsletter-container {
+        width: 100%;
+        background-image: url(../img/newsleter.png);
+
+
+        .contents {
+            @media screen and (max-width: 767px) {
+                padding: 50px 0px;
+                padding-left: 20px;
+
+            }
+            padding: 100px 0px;
+            padding-left: 100px;
+
+            p.title {
+                font-size: 18px;
+                font-family: neueMedium;
+                color: #8785aa;
+                text-transform: uppercase;
+                margin-bottom: 30px;
+
+            }
+
+            p.header {
+                @media screen and (max-width: 767px) {
+                    font-size: 24px;
+                    line-height: 24px;
+                    width: 100%;
+                }
+                font-size: 44px;
+                line-height: 54px;
+                font-family: neueMedium;
+                margin-bottom: 30px;
+                width: 40%;
+            }
+
+            .input-container {
+                @media screen and (max-width: 767px) {
+                    background-color: transparent;
+                }
+                display: inline-block;
+                background-color: #fff;
+                border-radius: 5px;
+
+                input {
+                    @media screen and (max-width: 767px) {
+                        padding-right: 151.33px;
+                        margin-bottom: 20px;
+
+                    }
+                    border-radius: 5px;
+                    border: none;
+
+                    padding: 24px 0px;
+                    padding-left: 30px;
+                    padding-right: 212px;
+
+
+                }
+
+                .input-btn {
+                    @extend %btn;
+                    padding: 16px 26px;
+                    margin-right: 9px;
+                }
+
+
+            }
+
+
+        }
+    }
+}
